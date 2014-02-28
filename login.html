@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+        <title>Login Form</title>
+        <script type="text/javascript">
+            function validate()
+            {
+                name = document.getElementById("username").value;
+                word = document.getElementById("password").value;
+                if (name !== "" &&  word !== "")
+                {
+                    document.getElementById("form1").submit();
+                }
+            }
+        </script>
+    </head>   
+    <body>
+        <header>
+            <div id="topHat"> 
+                <h1 id="title">Login</h1>
+            </div>
+            <div id ='top-menu'>
+                <ul>
+                    <li><a href="index.html" class="navagation">
+                            HOME</a></li>
+                    <li><a href="assignments.html" class="navagation">
+                            CS 313 ASSIGNMENTS</a></li>
+                </ul>
+            </div>            
+        </header>
+        <div id="content">
+        <div id="info" style="width:50%;">    
+        <form id="form1" name="form1" method="post" action="login.php">
+            <table width="510" border="0" align="center">
+                <tr>
+                    <td colspan="2">Login Form</td>
+                </tr>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="username" id="username" /></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" id="password" /></td>
+                </tr>
+                <tr>
+                   
+                    <td><button type="button" 
+                                onclick="window.location.href='register.html'">
+                            Register</button></td>
+                    <td><button type="button" onclick="validate()">Log In</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </div>
+        </div>
+        <footer>
+            &copy; 2014 Gorewicz     
+        </footer>         
+    </body>
+</html>
